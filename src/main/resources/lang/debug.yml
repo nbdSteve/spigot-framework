@@ -1,0 +1,14 @@
+insufficient-permission:
+  action-bar: false
+  text:
+    - '&5&lPlugin &4(&c&lERROR&4)&d| &7You do not have the permission node (&b{node&7) required to use that.'
+
+incorrect-args:
+  action-bar: false
+  text:
+    - '&5&lPlugin &4(&c&lERROR&4)&d| &7The number of arguments you entered is incorrect.'
+
+invalid-command:
+  action-bar: false
+  text:
+    - '&5&lPlugin &4(&c&lERROR&4)&d| &7The command you entered is invalid.'

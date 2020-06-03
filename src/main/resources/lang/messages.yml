@@ -1,0 +1,9 @@
+help:
+  action-bar: false
+  text:
+    - '&5&lPlugin&d| &7Example help message.'
+
+reload:
+  action-bar: false
+  text:
+    - '&5&lPlugin&d| &7Example reload message&7.'
