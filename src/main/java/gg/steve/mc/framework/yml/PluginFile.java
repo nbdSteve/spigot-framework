@@ -1,4 +1,4 @@
-package gg.steve.mc.framework.managers;
+package gg.steve.mc.framework.yml;
 
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

@@ -1,6 +1,6 @@
-package gg.steve.mc.framework.managers;
+package gg.steve.mc.framework.yml.utils;
 
-import gg.steve.mc.framework.utils.YamlFileUtil;
+import gg.steve.mc.framework.yml.PluginFile;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -9,7 +9,7 @@ import java.util.HashMap;
 /**
  * Class that handles generating files for the plugin
  */
-public class FileManager {
+public class FileManagerUtil {
     //Store a hash map of the plugin files when they are loaded
     private static HashMap<String, PluginFile> files;
     //Store the main instance of the plugin
@@ -20,7 +20,7 @@ public class FileManager {
      *
      * @param instance Plugin, the main instance
      */
-    public FileManager(JavaPlugin instance) {
+    public FileManagerUtil(JavaPlugin instance) {
         this.instance = instance;
         files = new HashMap<>();
     }

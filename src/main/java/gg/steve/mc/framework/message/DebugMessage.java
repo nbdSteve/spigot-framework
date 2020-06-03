@@ -1,6 +1,6 @@
 package gg.steve.mc.framework.message;
 
-import gg.steve.mc.framework.managers.Files;
+import gg.steve.mc.framework.yml.Files;
 import gg.steve.mc.framework.utils.ColorUtil;
 import gg.steve.mc.framework.utils.actionbarapi.ActionBarAPI;
 import org.bukkit.command.CommandSender;

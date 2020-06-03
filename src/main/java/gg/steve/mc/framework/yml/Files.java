@@ -1,5 +1,6 @@
-package gg.steve.mc.framework.managers;
+package gg.steve.mc.framework.yml;
 
+import gg.steve.mc.framework.yml.utils.FileManagerUtil;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -19,19 +20,19 @@ public enum Files {
         this.path = path;
     }
 
-    public void load(FileManager fileManager) {
+    public void load(FileManagerUtil fileManager) {
         fileManager.add(name(), this.path);
     }
 
     public YamlConfiguration get() {
-        return FileManager.get(name());
+        return FileManagerUtil.get(name());
     }
 
     public void save() {
-        FileManager.save(name());
+        FileManagerUtil.save(name());
     }
 
     public static void reload() {
-        FileManager.reload();
+        FileManagerUtil.reload();
     }
 }

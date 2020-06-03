@@ -1,6 +1,6 @@
 package gg.steve.mc.framework.utils;
 
-import gg.steve.mc.framework.managers.PluginFile;
+import gg.steve.mc.framework.yml.PluginFile;
 import gg.steve.mc.framework.nbt.NBTItem;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

@@ -1,5 +1,6 @@
-package gg.steve.mc.framework.managers;
+package gg.steve.mc.framework.yml;
 
+import gg.steve.mc.framework.yml.utils.FileManagerUtil;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -8,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * Class that handles setting up the plugin on start
  */
 public class SetupManager {
-    private static FileManager fileManager;
+    private static FileManagerUtil fileManager;
 
     private SetupManager() throws IllegalAccessException {
         throw new IllegalAccessException("Manager class cannot be instantiated.");
@@ -17,10 +18,9 @@ public class SetupManager {
     /**
      * Loads the files into the file manager
      */
-    public static void setupFiles(FileManager fm) {
+    public static void setupFiles(FileManagerUtil fm) {
         fileManager = fm;
         Files.CONFIG.load(fm);
-        Files.OMNI_CONFIG.load(fm);
         Files.PERMISSIONS.load(fm);
         Files.DEBUG.load(fm);
         Files.MESSAGES.load(fm);
@@ -50,7 +50,7 @@ public class SetupManager {
 
     }
 
-    public static FileManager getFileManager() {
+    public static FileManagerUtil getFileManager() {
         return fileManager;
     }
 }

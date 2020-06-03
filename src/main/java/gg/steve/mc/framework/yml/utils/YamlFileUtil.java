@@ -1,6 +1,7 @@
-package gg.steve.mc.framework.utils;
+package gg.steve.mc.framework.yml.utils;
 
-import gg.steve.mc.framework.managers.PluginFile;
+import gg.steve.mc.framework.utils.LogUtil;
+import gg.steve.mc.framework.yml.PluginFile;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -34,20 +35,20 @@ public class YamlFileUtil extends PluginFile {
         this.file = new File(instance.getDataFolder(), fileName);
         if (!file.exists()) {
             instance.saveResource(fileName, false);
-            instance.getLogger().info("The internal YAML file: " + fileName + " was not found, actively creating / loading it now.");
+            LogUtil.info("The internal YAML file: " + fileName + " was not found, actively creating / loading it now.");
         }
         yamlFile = new YamlConfiguration();
         try {
             yamlFile.load(file);
         } catch (InvalidConfigurationException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " is not in the correct format, please check your YAML syntax.");
         } catch (FileNotFoundException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " was not found, please contact the developer. Disabling the plugin.");
             instance.getServer().getPluginManager().disablePlugin(instance);
         } catch (IOException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " could not be loaded, please contact the developer. Disabling the plugin.");
             instance.getServer().getPluginManager().disablePlugin(instance);
         }
@@ -74,14 +75,14 @@ public class YamlFileUtil extends PluginFile {
         try {
             yamlFile.load(file);
         } catch (InvalidConfigurationException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " is not in the correct format, please check your YAML syntax.");
         } catch (FileNotFoundException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " was not found, please contact the developer. Disabling the plugin.");
             instance.getServer().getPluginManager().disablePlugin(instance);
         } catch (IOException e) {
-            instance.getLogger().severe("The supplied file " + fileName +
+            LogUtil.warning("The supplied file " + fileName +
                     " could not be loaded, please contact the developer. Disabling the plugin.");
             instance.getServer().getPluginManager().disablePlugin(instance);
         }

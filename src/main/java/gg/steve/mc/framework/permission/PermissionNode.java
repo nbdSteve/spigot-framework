@@ -1,6 +1,6 @@
 package gg.steve.mc.framework.permission;
 
-import gg.steve.mc.framework.managers.Files;
+import gg.steve.mc.framework.yml.Files;
 import org.bukkit.command.CommandSender;
 
 public enum PermissionNode {
